@@ -6,13 +6,16 @@ using namespace std;
 
 class Board
 {
-  public:
+  private:
     int size;
     Value **board;
+
+  public:
     Board();
     Board(int boardSize);
     Board(const Board &);
     ~Board();
+    const int getSize();
     //Value getValue(int row, int col);
     Value &operator[](Coordinates);
     Board &operator=(const Board &);
