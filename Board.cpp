@@ -1,8 +1,6 @@
 #include <iostream>
 #include <exception>
 #include "Board.hpp"
-#include "Exceptions.hpp"
-#include "Coordinates.hpp"
 using namespace std;
 
 Board::Board(int boardSize)
