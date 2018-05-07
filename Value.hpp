@@ -1,7 +1,8 @@
 #pragma once
-#include "Coordinates.hpp"
 #include <iostream>
-#include "Exceptions.hpp"
+#include "Coordinates.hpp"
+#include "IllegalCharException.hpp"
+
 using namespace std;
 
 class Value{
