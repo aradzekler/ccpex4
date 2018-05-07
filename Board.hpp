@@ -1,7 +1,8 @@
 #pragma once
 #include <iostream>
 #include "Value.hpp"
-#include "Exceptions.hpp"
+#include "IllegalCoordinateException.hpp"
+#include "IllegalCharException.hpp"
 using namespace std;
 
 class Board
