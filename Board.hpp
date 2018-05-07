@@ -15,7 +15,6 @@ class Board
     ~Board();
     //Value getValue(int row, int col);
     Value &operator[](Coordinates);
-    Value operator[](Coordinates) const;
     Board &operator=(const Board &);
     Board &operator=(char c);
     friend ostream &operator<<(ostream &out, Board &b);
