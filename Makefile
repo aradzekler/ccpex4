@@ -3,7 +3,7 @@ CXXFLAGS=-std=c++17
 
 all: Board.o IllegalCharException.o IllegalCoordinateException.o Coordinates.o Value.o
 
-Board.o: Board.cpp Board.hpp
+Board.o: Board.cpp Board.h
 	$(CXX) $(CXXFLAGS) -c Board.cpp -o Board.o
 
 IllegalCharException.o: IllegalCharException.cpp IllegalCharException.hpp
