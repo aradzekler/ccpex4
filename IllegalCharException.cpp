@@ -7,5 +7,9 @@ IllegalCharException::IllegalCharException(const char c)
 
 string IllegalCharException::theChar() const 
 {
-    return to_string(illegalchar);
+stringstream ss;
+string target;
+char mychar = illegalchar;
+ss << mychar;
+ss >> target;
 }
