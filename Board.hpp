@@ -1,5 +1,6 @@
 #include <iostream>
 #include "Value.hpp"
+#include "Exceptions.hpp"
 using namespace std;
 
 class Board
