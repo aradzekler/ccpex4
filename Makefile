@@ -1,7 +1,7 @@
 CXX=clang++-5.0
 CXXFLAGS=-std=c++17 
 
-all: Board.o Exceptions.o Coordinates.o Value.o
+all: Board.o IllegalCharException.o IllegalCoordinateException.o Coordinates.o Value.o
 
 Board.o: Board.cpp Board.hpp
 	$(CXX) $(CXXFLAGS) -c Board.cpp -o Board.o
