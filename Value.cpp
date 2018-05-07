@@ -12,7 +12,7 @@ Value::Value()
 
 Value &Value::operator=(char c)
 {
-    if (c != 'X' && c != 'O')
+    if (c != 'X' && c != 'O' && c != '.')
         throw IllegalCharException(c);
     val = c;
     return *this;
