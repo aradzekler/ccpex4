@@ -5,9 +5,7 @@ IllegalCharException::IllegalCharException(const char c)
     this->illegalchar = c;
 }
 
-string IllegalCharException::theChar() const
+string IllegalCharException::theChar() const 
 {
-    ostringstream out;
-    out << illegalchar;
-    return out.str();
+    return to_string(illegalchar);
 }
