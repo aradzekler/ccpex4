@@ -1,5 +1,5 @@
 #include <iostream>
-#include "Board.h"
+#include "Board.hpp"
 using namespace std;
 
 Board::Board(int boardSize) : size(boardSize)
@@ -32,6 +32,11 @@ Board::~Board()
         delete board[i];
     }
     delete board;
+}
+
+const int Board::getSize()
+{
+    return size;
 }
 
 // overloading [] // SET
@@ -75,13 +80,14 @@ Board &Board::operator=(char c)
 }
 
 // overloading <<
-ostream &operator<<(ostream &out, Board &board)
+ostream &operator<<(ostream &out, Board const &obj)
 {
-    for (int i = 0; i < board.size; i++)
+    int objSize = obj.size;
+    for (int i = 0; i < objSize; i++)
     {
-        for (int j = 0; j < board.size; j++)
+        for (int j = 0; j < objSize; j++)
         {
-            out << board.board[i][j];
+            out << obj.board[i][j];
         }
         out << "\n";
     }
