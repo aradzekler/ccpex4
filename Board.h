@@ -19,5 +19,5 @@ class Board
     Value &operator[](Coordinates);
     Board &operator=(const Board &);
     Board &operator=(char c);
-    friend ostream &operator<<(ostream &out, Board &b);
+    friend ostream &operator<<(ostream &out, Board const &b);
 };
