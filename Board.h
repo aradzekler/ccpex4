@@ -7,11 +7,9 @@ using namespace std;
 
 class Board
 {
-  private:
-    int size;
-    Value **board;
-
   public:
+    Value **board;
+    int size;
     Board();
     Board(int boardSize);
     Board(const Board &);
@@ -23,4 +21,3 @@ class Board
     Board &operator=(char c);
     friend ostream &operator<<(ostream &out, Board &b);
 };
-
