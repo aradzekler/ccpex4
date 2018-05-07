@@ -9,10 +9,10 @@ Board.o: Board.cpp Board.hpp
 Exceptions.o: Exceptions.cpp Exceptions.hpp
 	$(CXX) $(CXXFLAGS) -c Exceptions.cpp -o Exceptions.o
 
-Coordinate.o: Coordinates.cpp Coordinates.hpp
+Coordinates.o: Coordinates.cpp Coordinates.hpp
 	$(CXX) $(CXXFLAGS) -c Coordinates.cpp -o Coordinates.o
 
-Cell.o: Value.cpp Value.hpp
+Value.o: Value.cpp Value.hpp
 	$(CXX) $(CXXFLAGS) -c Value.cpp -o Value.o
 clean:
 	rm *.o 
