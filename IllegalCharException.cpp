@@ -11,8 +11,3 @@ char IllegalCharException::theChar() const
 {
     return this->illegalchar;
 }
-
-IllegalCharException::~IllegalCharException()
-{
-    //
-}
