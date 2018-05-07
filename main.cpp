@@ -1,5 +1,4 @@
 #include "Board.hpp"
-#include "Exceptions.hpp"
 #include <iostream>
 using namespace std;
 
