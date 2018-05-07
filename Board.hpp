@@ -1,3 +1,4 @@
+#pragma once
 #include <iostream>
 #include "Value.hpp"
 #include "Exceptions.hpp"
