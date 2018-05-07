@@ -6,8 +6,11 @@ all: Board.o Exceptions.o Coordinates.o Value.o
 Board.o: Board.cpp Board.hpp
 	$(CXX) $(CXXFLAGS) -c Board.cpp -o Board.o
 
-Exceptions.o: Exceptions.cpp Exceptions.hpp
-	$(CXX) $(CXXFLAGS) -c Exceptions.cpp -o Exceptions.o
+IllegalCharException.o: IllegalCharException.cpp IllegalCharException.hpp
+	$(CXX) $(CXXFLAGS) -c IllegalCharException.cpp -o IllegalCharException.o
+
+IllegalCoordinateException.o: IllegalCoordinateException.cpp IllegalCoordinateException.hpp
+	$(CXX) $(CXXFLAGS) -c IllegalCoordinateException.cpp -o IllegalCoordinateException.o
 
 Coordinates.o: Coordinates.cpp Coordinates.hpp
 	$(CXX) $(CXXFLAGS) -c Coordinates.cpp -o Coordinates.o
