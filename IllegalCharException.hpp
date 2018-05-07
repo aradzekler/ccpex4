@@ -1,4 +1,3 @@
-#pragma once
 #include <string>
 #include <exception>
 
@@ -10,7 +9,6 @@ class IllegalCharException : public exception
     char illegalchar;
 
   public:
-    IllegalCharException(char c);
-    char theChar() const;
-    ~IllegalCharException();
+    IllegalCharException(const char c);
+    string theChar() const;
 };
