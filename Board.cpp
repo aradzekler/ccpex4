@@ -1,5 +1,5 @@
 #include <iostream>
-#include "Board.hpp"
+#include "Board.h"
 using namespace std;
 
 Board::Board(int boardSize) : size(boardSize)
