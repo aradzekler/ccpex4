@@ -24,9 +24,3 @@ class Board
     friend ostream &operator<<(ostream &out, Board &b);
 };
 
-class Coordinates
-{
-  public:
-    int row;
-    int col;
-};
