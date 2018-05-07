@@ -1,4 +1,3 @@
-#pragma once
 #include <string>
 #include <exception>
 #include "Coordinates.hpp"
@@ -13,6 +12,5 @@ class IllegalCoordinateException : public exception
   public:
     IllegalCoordinateException(const Coordinates &);
     string theCoordinate() const;
-    IllegalCoordinateException(const Coordinates);
     ~IllegalCoordinateException();
 };
