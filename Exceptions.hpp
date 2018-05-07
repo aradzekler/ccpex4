@@ -1,24 +1,28 @@
-#include <string>
-#include <exception>
-#include "Coordinates.hpp"
-
+#pragma once
+#include <iostream>
+#include "Value.hpp"
+#include "Exceptions.hpp"
 using namespace std;
 
-class IllegalCoordinateException : public exception
+class Board
 {
   public:
-    Coordinates *coor;
-    IllegalCoordinateException(const Coordinates);
-    string theCoordinate() const;
-    IllegalCoordinateException(const Coordinates);
-    ~IllegalCoordinateException();
+    int size;
+    Value **board;
+    Board();
+    Board(int boardSize);
+    Board(const Board &);
+    ~Board();
+    //Value getValue(int row, int col);
+    Value &operator[](Coordinates);
+    Board &operator=(const Board &);
+    Board &operator=(char c);
+    friend ostream &operator<<(ostream &out, Board &b);
 };
 
-class IllegalCharException : public exception
+class Coordinates
 {
   public:
-    char illegalchar;
-    IllegalCharException(char c);
-    char theChar() const;
-    ~IllegalCharException();
+    int row;
+    int col;
 };
