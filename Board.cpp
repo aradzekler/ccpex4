@@ -52,9 +52,6 @@ Board &Board::operator=(const Board &board)
 {
     size = board.size;
     Value **temp = new Value *[size];
-
-    this->~Board(); // deletes current board.
-
     for (int i = 0; i < size; i++)
     {
         temp[i] = new Value[size];
