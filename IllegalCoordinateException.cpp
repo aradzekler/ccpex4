@@ -7,10 +7,7 @@ IllegalCoordinateException::IllegalCoordinateException(const Coordinates &illega
 
 string IllegalCoordinateException::theCoordinate() const
 {
-    //return to_string(coor->row) + "," + to_string(coor->col);
-    ostringstream out;
-    out << coor->row << "," << coor->col;
-    return out.str();
+    return to_string(coor->row) + "," + to_string(coor->col);
 }
 
 IllegalCoordinateException::~IllegalCoordinateException()
