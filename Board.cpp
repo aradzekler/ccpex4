@@ -3,10 +3,10 @@ using namespace std;
 
 Board::Board(int boardSize)
 {
-    board = new Value *[size];
-    for (int i = 0; i < size; i++)
+    board = new Value *[boardSize];
+    for (int i = 0; i < boardSize; i++)
     {
-        board[i] = new Value[size]; //dynamic allocating new values
+        board[i] = new Value[boardSize]; //dynamic allocating new values
     }
 }
 
