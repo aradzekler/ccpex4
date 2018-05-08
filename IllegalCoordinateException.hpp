@@ -1,5 +1,6 @@
 #pragma once
 #include <string>
+#include <sstream>
 #include <exception>
 #include "Coordinates.hpp"
 
@@ -7,11 +8,11 @@ using namespace std;
 
 class IllegalCoordinateException : public exception
 {
-  private:
-    Coordinates *coor;
+private:
+  Coordinates *coor;
 
-  public:
-    IllegalCoordinateException(const Coordinates &);
-    string theCoordinate() const;
-    ~IllegalCoordinateException();
+public:
+  IllegalCoordinateException(const Coordinates &);
+  string theCoordinate() const;
+  ~IllegalCoordinateException();
 };
