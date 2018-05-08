@@ -1,8 +1,9 @@
 #include "Board.h"
 using namespace std;
 
-Board::Board(int boardSize) : size(boardSize)
+Board::Board(int boardSize)
 {
+    size = boardSize;
     board = new Value *[size];
     for (int i = 0; i < size; i++)
     {
