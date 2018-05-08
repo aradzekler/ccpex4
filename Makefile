@@ -1,5 +1,5 @@
 CXX=clang++-5.0
-CXXFLAGS=-std=c++17 
+CXXFLAGS=-std=c++17 -Wall -Werror -Wvla
 
 all: Board.o IllegalCharException.o IllegalCoordinateException.o Coordinates.o Value.o
 
@@ -18,4 +18,4 @@ Coordinates.o: Coordinates.cpp Coordinates.hpp
 Value.o: Value.cpp Value.hpp
 	$(CXX) $(CXXFLAGS) -c Value.cpp -o Value.o
 clean:
-	rm *.o 
+	RM *.o 
