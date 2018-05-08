@@ -33,6 +33,7 @@ Board::~Board()
     delete board;
 }
 
+//getter
 const int Board::getSize()
 {
     return size;
