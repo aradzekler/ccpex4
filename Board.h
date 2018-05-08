@@ -8,16 +8,18 @@ using namespace std;
 
 class Board
 {
-  public:
-    Value **board;
-    int size;
-    Board();
-    Board(int boardSize);
-    Board(const Board &);
-    ~Board();
-    const int getSize();
-    Value &operator[](Coordinates);
-    Board &operator=(const Board &);
-    Board &operator=(char c);
-    friend ostream &operator<<(ostream &out, Board const &b);
+private:
+  Value **board;
+  int size;
+
+public:
+  Board();
+  Board(int boardSize);
+  Board(const Board &);
+  ~Board();
+  const int getSize();
+  Value &operator[](Coordinates);
+  Board &operator=(const Board &);
+  Board &operator=(char c);
+  friend ostream &operator<<(ostream &out, Board const &b);
 };
