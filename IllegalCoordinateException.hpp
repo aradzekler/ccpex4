@@ -1,6 +1,5 @@
 #pragma once
 #include <string>
-#include <sstream>
 #include <exception>
 #include "Coordinates.hpp"
 
