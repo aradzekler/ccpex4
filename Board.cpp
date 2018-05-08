@@ -1,12 +1,12 @@
 #include "Board.h"
 using namespace std;
 
-Board::Board(int boardSize) 
+Board::Board(int boardSize)
 {
     board = new Value *[size];
     for (int i = 0; i < size; i++)
     {
-        board[i] = new Value[size];
+        board[i] = new Value[size]; //dynamic allocating new values
     }
 }
 
@@ -42,7 +42,9 @@ const int Board::getSize()
 Value &Board::operator[](Coordinates coor)
 {
     if (coor.row >= size || coor.row < 0 || coor.col >= size || coor.col < 0)
+    {
         throw IllegalCoordinateException(coor);
+    }
     return board[coor.row][coor.col];
 }
 
@@ -74,7 +76,9 @@ Board &Board::operator=(char c)
         }
     }
     else
+    {
         throw IllegalCharException(c);
+    }
     return *this;
 }
 
