@@ -1,6 +1,5 @@
 #include "Value.hpp"
 
-
 Value::Value()
 {
     val = '.';
@@ -8,6 +7,10 @@ Value::Value()
 
 Value::Value(char c)
 {
+    if (c != 'X' && c != 'O' && c != '.')
+    {
+        throw IllegalCharException(c);
+    }
     val = c;
 }
 
