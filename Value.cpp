@@ -2,7 +2,7 @@
 
 Value::Value()
 {
-    val = '.';
+    val = '.'; // default as point.
 }
 
 Value::Value(char c)
