@@ -87,10 +87,9 @@ Board &Board::operator=(char c)
 // overloading <<
 ostream &operator<<(ostream &out, Board const &obj)
 {
-    int objSize = obj.size;
-    for (int i = 0; i < objSize; i++)
+    for (int i = 0; i < obj.size; i++)
     {
-        for (int j = 0; j < objSize; j++)
+        for (int j = 0; j < obj.size; j++)
         {
             out << obj.board[i][j];
         }
