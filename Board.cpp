@@ -53,13 +53,13 @@ Value &Board::operator[](Coordinates coor)
 Board &Board::operator=(const Board &board)
 {
     size = board.size;
-    Value **temp = new Value *[size];
+    this->board = new Value *[size];
     for (int i = 0; i < size; i++)
     {
-        temp[i] = new Value[size];
+        this->board[i] = new Value[size];
         for (int j = 0; j < size; j++)
         {
-            temp[i][j] = board.board[i][j];
+            this->board[i][j] = board.board[i][j];
         }
     }
     return *this;
