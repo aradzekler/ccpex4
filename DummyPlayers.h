@@ -13,7 +13,7 @@ class XYPlayer: public Player {
 		/*  Selects a single place to put my symbol, given the current board.
 			Defines the strategy of the player. */
 	
-		const Coordinate play(const Board& board) override;
+		const Coordinates play(const Board& board) override;
 };
 
 /* This player scans the board looping on y then on x, 
@@ -24,7 +24,7 @@ class YXPlayer: public Player {
 	public:
 
 		const string name() const override { return "YXPlayer"; }
-		const Coordinate play(const Board& board) override;
+		const Coordinates play(const Board& board) override;
 };
 
 /*  This player makes illegal moves - 
@@ -36,7 +36,7 @@ class IllegalPlayer: public Player {
 	public:
 	
 		const string name() const override { return "YXPlayer"; }
-		const Coordinate play(const Board& board) override;
+		const Coordinates play(const Board& board) override;
 };
 
 
@@ -48,5 +48,5 @@ class ExceptionPlayer: public Player {
 	public:
 	
 		const string name() const override { return "YXPlayer"; }
-		const Coordinate play(const Board& board) override;
+		const Coordinates play(const Board& board) override;
 };
