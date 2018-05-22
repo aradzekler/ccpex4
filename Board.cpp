@@ -35,7 +35,7 @@ Board::~Board()
 }
 
 //getter
-const int Board::getSize()
+int Board::getSize() const
 {
     return size;
 }
