@@ -50,6 +50,15 @@ Value &Board::operator[](Coordinates coor)
     return board[coor.row][coor.col];
 }
 
+Value Board::operator[](Coordinates coor) const
+{
+    if (coor.row >= size || coor.row < 0 || coor.col >= size || coor.col < 0)
+    {
+        throw IllegalCoordinateException(coor);
+    }
+    return board[coor.row][coor.col];
+}
+
 Board &Board::operator=(const Board &board)
 {
     size = board.size;
@@ -87,9 +96,10 @@ Board &Board::operator=(char c)
 // overloading <<
 ostream &operator<<(ostream &out, Board const &obj)
 {
-    for (int i = 0; i < obj.size; i++)
+    int objSize = obj.size;
+    for (int i = 0; i < objSize; i++)
     {
-        for (int j = 0; j < obj.size; j++)
+        for (int j = 0; j < objSize; j++)
         {
             out << obj.board[i][j];
         }
