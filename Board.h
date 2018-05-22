@@ -19,6 +19,7 @@ public:
   ~Board();
   const int getSize();
   Value &operator[](Coordinates);
+  Value operator[](Coordinates) const;
   Board &operator=(const Board &);
   Board &operator=(char c);
   friend ostream &operator<<(ostream &out, Board const &b);
