@@ -8,10 +8,10 @@ using namespace std;
 class IllegalCoordinateException : public exception
 {
 private:
-  Coordinates *coor;
+  Coordinate *coor;
 
 public:
-  IllegalCoordinateException(const Coordinates &);
+  IllegalCoordinateException(const Coordinate &);
   string theCoordinate() const;
   ~IllegalCoordinateException();
 };
