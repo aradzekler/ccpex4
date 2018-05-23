@@ -1,12 +1,12 @@
 #include "Champion.h"
 
-const Coordinates Champion::play(Board &board)
+const Coordinate Champion::play(Board &board)
 {
     if (reverse)
     {
         for (int i = board.getSize() - 1; i >= 0; --i)
         {
-            Coordinates coor{i, board.getSize() - i - 1};
+            Coordinate coor{i, board.getSize() - i - 1};
 
             if (board[coor] == '.')
             {
@@ -19,7 +19,7 @@ const Coordinates Champion::play(Board &board)
     {
         for (int i = 0; i < board.getSize(); ++i)
         {
-            Coordinates coor{i, board.getSize() - i - 1};
+            Coordinate coor{i, board.getSize() - i - 1};
 
             if (board[coor] == '.')
             {
