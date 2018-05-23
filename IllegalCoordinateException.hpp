@@ -1,7 +1,7 @@
 #pragma once
 #include <string>
 #include <exception>
-#include "Coordinates.hpp"
+#include "Coordinate.hpp"
 
 using namespace std;
 
