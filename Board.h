@@ -10,7 +10,7 @@ class Board
 {
 private:
   Value **board;
-  int size;
+  int bsize;
 
 public:
   Board();
