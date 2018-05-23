@@ -3,8 +3,8 @@
 
 const Coordinate XYPlayer::play(const Board& board) {
 
-	for (uint x=0; x<board.size(); ++x) {
-		for (uint y=0; y<board.size(); ++y) {
+	for (int x=0; x<board.size(); ++x) {
+		for (int y=0; y<board.size(); ++y) {
 			Coordinate c{x,y};
 			if (board[c]=='.') 
 				return c;
@@ -16,8 +16,8 @@ const Coordinate XYPlayer::play(const Board& board) {
 
 const Coordinate YXPlayer::play(const Board& board) {
 
-	for (uint y=0; y<board.size(); ++y) {
-		for (uint x=0; x<board.size(); ++x) {
+	for (int y=0; y<board.size(); ++y) {
+		for (int x=0; x<board.size(); ++x) {
 			Coordinate c{x,y};
 			if (board[c]=='.')
 				return c;
@@ -33,8 +33,8 @@ const Coordinate IllegalPlayer::play(const Board& board) {
 
 	char charOfOtherPlayer = (myChar=='X'? 'O': 'X');
 
-	for (uint y=0; y<board.size(); ++y) {
-		for (uint x=0; x<board.size(); ++x) {
+	for (int y=0; y<board.size(); ++y) {
+		for (int x=0; x<board.size(); ++x) {
 			Coordinate c{x,y};
 			if (board[c]==charOfOtherPlayer)
 				return c;
