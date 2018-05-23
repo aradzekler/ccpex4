@@ -31,7 +31,7 @@ const Coordinate YXPlayer::play(const Board& board) {
 
 const Coordinate IllegalPlayer::play(const Board& board) {
 
-	char charOfOtherPlayer = (myChar=='X'? 'O': 'X');
+	char charOfOtherPlayer = (value=='X'? 'O': 'X');
 
 	for (int y=0; y<board.size(); ++y) {
 		for (int x=0; x<board.size(); ++x) {
