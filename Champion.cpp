@@ -4,9 +4,9 @@ const Coordinate Champion::play(const Board& board)
 {
     if (reverse)
     {
-        for (int i = board.getSize() - 1; i >= 0; --i)
+        for (int i = board.size() - 1; i >= 0; --i)
         {
-            Coordinate coor{i, board.getSize() - i - 1};
+            Coordinate coor{i, board.size() - i - 1};
 
             if (board[coor] == '.')
             {
@@ -17,9 +17,9 @@ const Coordinate Champion::play(const Board& board)
     }
     else
     {
-        for (int i = 0; i < board.getSize(); ++i)
+        for (int i = 0; i < board.size(); ++i)
         {
-            Coordinate coor{i, board.getSize() - i - 1};
+            Coordinate coor{i, board.size() - i - 1};
 
             if (board[coor] == '.')
             {
