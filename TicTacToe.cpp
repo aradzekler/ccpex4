@@ -81,7 +81,7 @@ void TicTacToe::play(Player &xPlayer, Player &oPlayer)
     }
 }
 
-bool TicTacToe::check(Coordinates coor, Board &board)
+bool TicTacToe::check(Coordinate coor, Board &board)
 {
     char symb = board[coor];
     for (int i = 0; i < size; i++)
