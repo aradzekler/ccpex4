@@ -2,7 +2,7 @@
 #include <iostream>
 using namespace std;
 
-class Coordinates
+class Coordinate
 {
   public:
     int row;
