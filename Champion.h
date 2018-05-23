@@ -8,5 +8,5 @@ public:
 	bool reverse = false;
 
 	const string name() const override { return "Arad Zekler"; }
-	const Coordinate play (Board& board) override;
+	const Coordinate play (const Board& board) override;
 };
