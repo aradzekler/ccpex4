@@ -1,12 +1,12 @@
 #pragma once
 #include "Board.h"
-#include "Coordinates.hpp"
+#include "Coordinate.hpp"
 
 class Player{
     public:
         char value;
 
         virtual const string name() const;
-        virtual const Coordinates play (Board& board);
+        virtual const Coordinate play (Board& board);
         char getVal() const {return value;}
 };
