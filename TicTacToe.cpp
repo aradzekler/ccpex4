@@ -24,7 +24,7 @@ Player& TicTacToe::winner() const
 void TicTacToe::play(Player &xPlayer, Player &oPlayer)
 {
     *gboard = '.';
-    Coordinates tempc;
+    Coordinate tempc;
     gwinner = &oPlayer;
 
     xPlayer.value = 'X';
