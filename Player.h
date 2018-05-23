@@ -6,7 +6,7 @@ class Player{
     public:
         char value;
 
-        virtual const string name() const;
-        virtual const Coordinate play (Board& board);
+        virtual const string name() const { return ""; };
+        virtual const Coordinate play (Board& board){ return{0,0}; }
         char getVal() const {return value;}
 };
