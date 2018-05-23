@@ -1,6 +1,6 @@
 #include "Champion.h"
 
-const Coordinate Champion::play(Board &board)
+const Coordinate Champion::play(const Board& board)
 {
     if (reverse)
     {
