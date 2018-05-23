@@ -37,7 +37,7 @@ Board::~Board()
 //getter
 int Board::size() const
 {
-    return size;
+    return bsize;
 }
 
 // overloading [] // SET
