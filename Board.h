@@ -18,8 +18,8 @@ public:
   Board(const Board &);
   ~Board();
   int getSize() const;
-  Value &operator[](Coordinates);
-  Value operator[](Coordinates) const;
+  Value &operator[](Coordinate);
+  Value operator[](Coordinate) const;
   Board &operator=(const Board &);
   Board &operator=(char c);
   friend ostream &operator<<(ostream &out, Board const &b);
