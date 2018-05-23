@@ -5,6 +5,6 @@ using namespace std;
 class Coordinate
 {
   public:
-    uint row;
-    uint col;
+    int row;
+    int col;
 };
