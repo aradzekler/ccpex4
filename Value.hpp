@@ -1,6 +1,6 @@
 #pragma once
 #include <iostream>
-#include "Coordinates.hpp"
+#include "Coordinate.hpp"
 #include "IllegalCharException.hpp"
 
 using namespace std;
