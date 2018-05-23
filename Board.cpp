@@ -41,7 +41,7 @@ int Board::getSize() const
 }
 
 // overloading [] // SET
-Value &Board::operator[](Coordinates coor)
+Value &Board::operator[](Coordinate coor)
 {
     if (coor.row >= size || coor.row < 0 || coor.col >= size || coor.col < 0)
     {
@@ -50,7 +50,7 @@ Value &Board::operator[](Coordinates coor)
     return board[coor.row][coor.col];
 }
 
-Value Board::operator[](Coordinates coor) const
+Value Board::operator[](Coordinate coor) const
 {
     if (coor.row >= size || coor.row < 0 || coor.col >= size || coor.col < 0)
     {
