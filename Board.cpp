@@ -13,7 +13,7 @@ Board::Board(int boardSize)
 
 Board::Board(const Board &b)
 {
-    bsize = b.size;
+    bsize = b.bsize;
     board = new Value *[bsize];
     for (int i = 0; i < bsize; i++)
     {
