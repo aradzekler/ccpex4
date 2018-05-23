@@ -3,22 +3,22 @@ using namespace std;
 
 Board::Board(int boardSize)
 {
-    size = boardSize;
-    board = new Value *[size];
-    for (int i = 0; i < size; i++)
+    bsize = boardSize;
+    board = new Value *[bsize];
+    for (int i = 0; i < bsize; i++)
     {
-        board[i] = new Value[size]; //dynamic allocating new values
+        board[i] = new Value[bsize]; //dynamic allocating new values
     }
 }
 
 Board::Board(const Board &b)
 {
-    size = b.size;
-    board = new Value *[size];
-    for (int i = 0; i < size; i++)
+    bsize = b.size;
+    board = new Value *[bsize];
+    for (int i = 0; i < bsize; i++)
     {
-        board[i] = new Value[size];
-        for (int j = 0; j < size; j++)
+        board[i] = new Value[bsize];
+        for (int j = 0; j < bsize; j++)
         {
             board[i][j] = b.board[i][j];
         }
@@ -27,7 +27,7 @@ Board::Board(const Board &b)
 
 Board::~Board()
 {
-    for (int i = 0; i < size; i++)
+    for (int i = 0; i < bsize; i++)
     {
         delete board[i];
     }
@@ -43,7 +43,7 @@ int Board::size() const
 // overloading [] // SET
 Value &Board::operator[](Coordinate coor)
 {
-    if (coor.row >= size || coor.row < 0 || coor.col >= size || coor.col < 0)
+    if (coor.row >= bsize || coor.row < 0 || coor.col >= bsize || coor.col < 0)
     {
         throw IllegalCoordinateException(coor);
     }
@@ -52,7 +52,7 @@ Value &Board::operator[](Coordinate coor)
 
 Value Board::operator[](Coordinate coor) const
 {
-    if (coor.row >= size || coor.row < 0 || coor.col >= size || coor.col < 0)
+    if (coor.row >= bsize || coor.row < 0 || coor.col >= bsize || coor.col < 0)
     {
         throw IllegalCoordinateException(coor);
     }
@@ -61,12 +61,12 @@ Value Board::operator[](Coordinate coor) const
 
 Board &Board::operator=(const Board &board)
 {
-    size = board.size;
-    this->board = new Value *[size];
-    for (int i = 0; i < size; i++)
+    bsize = board.bsize;
+    this->board = new Value *[bsize];
+    for (int i = 0; i < bsize; i++)
     {
-        this->board[i] = new Value[size];
-        for (int j = 0; j < size; j++)
+        this->board[i] = new Value[bsize];
+        for (int j = 0; j < bsize; j++)
         {
             this->board[i][j] = board.board[i][j];
         }
@@ -78,9 +78,9 @@ Board &Board::operator=(char c)
 {
     if (c == '.')
     {
-        for (int i = 0; i < size; i++)
+        for (int i = 0; i < bsize; i++)
         {
-            for (int j = 0; j < size; j++)
+            for (int j = 0; j < bsize; j++)
             {
                 board[i][j] = '.';
             }
@@ -96,7 +96,7 @@ Board &Board::operator=(char c)
 // overloading <<
 ostream &operator<<(ostream &out, Board const &obj)
 {
-    int objSize = obj.size;
+    int objSize = obj.bsize;
     for (int i = 0; i < objSize; i++)
     {
         for (int j = 0; j < objSize; j++)
