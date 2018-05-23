@@ -1,5 +1,5 @@
 #pragma once
-#include "Coordinates.hpp"
+#include "Coordinate.hpp"
 #include "Board.h"
 #include "Player.h"
 
@@ -8,5 +8,5 @@ public:
 	bool reverse = false;
 
 	const string name() const override { return "Arad Zekler"; }
-	const Coordinates play (Board& board) override;
+	const Coordinate play (Board& board) override;
 };
