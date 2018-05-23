@@ -17,7 +17,7 @@ public:
   Board(int boardSize);
   Board(const Board &);
   ~Board();
-  int getSize() const;
+  int size() const;
   Value &operator[](Coordinate);
   Value operator[](Coordinate) const;
   Board &operator=(const Board &);
