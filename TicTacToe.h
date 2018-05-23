@@ -15,5 +15,5 @@ class TicTacToe
     Board board() const;
     Player& winner() const;
     void play(Player&, Player&);
-    bool check(Coordinates, Board &);
+    bool check(Coordinate, Board &);
 };
