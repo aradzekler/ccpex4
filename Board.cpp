@@ -112,16 +112,16 @@ istream &operator>>(istream &in, Board &obj)
 {
     string line;
     cin >> line;
-    obj.size = line.size();
-    obj.board = new Value *[obj.size];
-    for (int i = 0; i < obj.size; i++)
+    obj.bsize = line.size();
+    obj.board = new Value *[obj.bsize];
+    for (int i = 0; i < obj.bsize; i++)
     {
-        obj.board[i] = new Value[obj.size];
-        for (int j = 0; j < obj.size; j++)
+        obj.board[i] = new Value[obj.bsize];
+        for (int j = 0; j < obj.bsize; j++)
         {
             obj.board[i][j] = line[j];
         }
-        if (i != obj.size - 1)
+        if (i != obj.bsize - 1)
             cin >> line;
     }
     return in;
