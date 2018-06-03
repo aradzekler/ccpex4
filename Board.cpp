@@ -205,10 +205,10 @@ void Board::drawboard(Color **image, int size)
             for (int j = (cell * k) + 20 * (k - 1); j < (cell * k) + 20 * k && j < size; ++j)
             {
                 image[j][i].red = 0;
-                image[j][i].green = 0;
+                image[j][i].green = 255;
                 image[j][i].blue = 0;
                 image[i][j].red = 0;
-                image[i][j].green = 0;
+                image[i][j].green = 255;
                 image[i][j].blue = 0;
             }
         }
