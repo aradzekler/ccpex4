@@ -148,7 +148,7 @@ string Board::draw(int size)
     const int sizeOfArr = size;
     ofstream imagef(fname, ios::out | ios::binary);
 
-    imagef << "P7" << endl
+    imagef << "P6" << endl
            << size << " " << size << endl
            << 255 << endl;
 
