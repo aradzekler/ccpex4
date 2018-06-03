@@ -139,14 +139,10 @@ string Board::draw(int size)
     while (true)
     {
         ifstream f(to_string(numfile) + ".ppm");
-        if (!f.good()) 
-        { // if stream is inturupted
+        if (!f.good()) // if stream is inturupted
             break;
-        }
         else
-        {
             numfile++;
-        }
     }
     fname = to_string(numfile) + ".ppm";
     const int sizeOfArr = size;
@@ -170,17 +166,17 @@ string Board::draw(int size)
     }
 
     drawboard(image, size);
-    for (int i = 0; i < bsize; i++) // draw signs accordingly
+    for (int k = 0; k < bsize; k++) // draw signs accordingly
     {
         for (int j = 0; j < bsize; j++)
         {
-            if (board[i][j].val == 'X')
+            if (board[k][j].val == 'X')
             {
-                drawX(image, size, i, j);
+                drawX(image, size, k, j);
             }
-            else if (board[i][j].val == 'O')
+            else if (board[k][j].val == 'O')
             {
-                drawO(image, size, i, j);
+                drawO(image, size, k, j);
             }
         }
     }
