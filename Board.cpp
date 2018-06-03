@@ -159,9 +159,9 @@ string Board::draw(int size)
         image[i] = new Color[size];
         for (int j = 0; j < size; j++)
         {
-            image[i][j].red = 255;
-            image[i][j].green = 255;
-            image[i][j].blue = 255;
+            image[i][j].red = 0;
+            image[i][j].green = 0;
+            image[i][j].blue = 0;
         }
     }
 
