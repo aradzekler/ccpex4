@@ -139,7 +139,7 @@ string Board::draw(int size)
     while (true)
     {
         ifstream f(to_string(numfile) + ".ppm");
-        if (f.bad()) // if stream is inturupted
+        if (!f.good()) // if stream is inturupted
             break;
         else
             numfile++;
