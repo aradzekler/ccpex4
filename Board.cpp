@@ -188,7 +188,7 @@ string Board::draw(int size)
     {
         for (int j = 0; j < size; ++j)
         {
-            imagef.write(reinterpret_cast<char *>(&image[i][j]), size);
+            imagef.write(reinterpret_cast<char *>(&image[i][j]), 1);
         }
     }
     imagef.close();
