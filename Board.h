@@ -13,7 +13,6 @@ class Board
 private:
   Value **board;
   int bsize;
-  string fname;
 
 public:
   string fname;
