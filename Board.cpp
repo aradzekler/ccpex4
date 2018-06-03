@@ -25,6 +25,12 @@ Board::Board(const Board &b)
     }
 }
 
+Board::Board()
+{
+    bsize = 0;
+    board = NULL;
+}
+
 Board::~Board()
 {
     for (int i = 0; i < bsize; i++)
