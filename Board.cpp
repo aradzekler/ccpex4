@@ -148,7 +148,7 @@ string Board::draw(int size)
     const int sizeOfArr = size;
     ofstream imagef(fname, ios::out | ios::binary);
 
-    imagef << "P6" << endl
+    imagef << "P7" << endl
            << size << " " << size << endl
            << 255 << endl;
 
@@ -239,21 +239,21 @@ void Board::drawO(Color **image, int size, int k, int j)
     int x = r, y = 0;
     int P = 1 - r;
 
-    image[x + xCent][y + yCent].red = 255;
+    image[x + xCent][y + yCent].red = 0;
     image[x + xCent][y + yCent].green = 0;
-    image[x + xCent][y + yCent].blue = 0;
+    image[x + xCent][y + yCent].blue = 255;
 
     if (r > 0)
     {
-        image[x + xCent][-y + yCent].red = 255;
+        image[x + xCent][-y + yCent].red = 0;
         image[x + xCent][-y + yCent].green = 0;
-        image[x + xCent][-y + yCent].blue = 0;
-        image[y + xCent][x + yCent].red = 255;
+        image[x + xCent][-y + yCent].blue = 255;
+        image[y + xCent][x + yCent].red = 0;
         image[y + xCent][x + yCent].green = 0;
-        image[y + xCent][x + yCent].blue = 0;
-        image[-y + xCent][x + yCent].red = 255;
+        image[y + xCent][x + yCent].blue = 255;
+        image[-y + xCent][x + yCent].red = 0;
         image[-y + xCent][x + yCent].green = 0;
-        image[-y + xCent][x + yCent].blue = 0;
+        image[-y + xCent][x + yCent].blue = 255;
     }
     while (x > y)
     {
@@ -271,32 +271,32 @@ void Board::drawO(Color **image, int size, int k, int j)
         {
             break;
         }
-        image[x + xCent][y + yCent].red = 255;
+        image[x + xCent][y + yCent].red = 0;
         image[x + xCent][y + yCent].green = 0;
-        image[x + xCent][y + yCent].blue = 0;
-        image[-x + xCent][y + yCent].red = 255;
+        image[x + xCent][y + yCent].blue = 255;
+        image[-x + xCent][y + yCent].red = 0;
         image[-x + xCent][y + yCent].green = 0;
-        image[-x + xCent][y + yCent].blue = 0;
-        image[x + xCent][-y + yCent].red = 255;
+        image[-x + xCent][y + yCent].blue = 255;
+        image[x + xCent][-y + yCent].red = 0;
         image[x + xCent][-y + yCent].green = 0;
-        image[x + xCent][-y + yCent].blue = 0;
-        image[-x + xCent][-y + yCent].red = 255;
+        image[x + xCent][-y + yCent].blue = 255;
+        image[-x + xCent][-y + yCent].red = 0;
         image[-x + xCent][-y + yCent].green = 0;
-        image[-x + xCent][-y + yCent].blue = 0;
+        image[-x + xCent][-y + yCent].blue = 255;
         if (x != y)
         {
-            image[y + xCent][x + yCent].red = 255;
+            image[y + xCent][x + yCent].red = 0;
             image[y + xCent][x + yCent].green = 0;
-            image[y + xCent][x + yCent].blue = 0;
-            image[-y + xCent][x + yCent].red = 255;
+            image[y + xCent][x + yCent].blue = 255;
+            image[-y + xCent][x + yCent].red = 0;
             image[-y + xCent][x + yCent].green = 0;
-            image[-y + xCent][x + yCent].blue = 0;
-            image[y + xCent][-x + yCent].red = 255;
+            image[-y + xCent][x + yCent].blue = 255;
+            image[y + xCent][-x + yCent].red = 0;
             image[y + xCent][-x + yCent].green = 0;
-            image[y + xCent][-x + yCent].blue = 0;
-            image[-y + xCent][-x + yCent].red = 255;
+            image[y + xCent][-x + yCent].blue = 255;
+            image[-y + xCent][-x + yCent].red = 0;
             image[-y + xCent][-x + yCent].green = 0;
-            image[-y + xCent][-x + yCent].blue = 0;
+            image[-y + xCent][-x + yCent].blue = 255;
         }
     }
 }
