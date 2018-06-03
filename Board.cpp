@@ -257,7 +257,7 @@ void Board::drawO(Color **image, int size, int k, int j)
     }
     while (x > y)
     {
-        yy++;
+        y++;
         if (P <= 0)
         {
             P = P + 2 * y + 1;
